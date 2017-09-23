@@ -2,7 +2,7 @@
 
 int main() {
     int valor;
-    printf("Entre com um valor");
+    printf("Entre com um valor:");
     scanf("%d",&valor);
 
     if ((valor%2) == 0) {
