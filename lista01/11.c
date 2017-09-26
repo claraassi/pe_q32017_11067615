@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int valor,valor_final = 0,opcao;
+    int valor,valor_final = 0,opcao,multiplicador = 1;
 
     /* le valor e opcao */
     printf("Entre com o valor:");
@@ -27,11 +27,17 @@ int main() {
                 valor_final = valor_final + 1;
                 printf("O valor em binario e %d\n",valor_final);
             }
-            
             break;
+            
         case 2:
-            
+            while (valor >=1) {
+                valor_final = ((valor % 10) * multiplicador) + valor_final;
+                valor = valor / 10;
+                multiplicador = multiplicador * 2;
+            }
+            printf("O valor em decimal e %d\n",valor_final);
             break;
+            
         default:
             printf("Opcao invalida\n");
             break;
