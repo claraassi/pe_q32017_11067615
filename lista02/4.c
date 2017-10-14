@@ -25,7 +25,7 @@ float multiplicacao(float x,float y)
 float divisao(float x,float y)
 {
     if (y != 0) return x / y;
-    return erro(2); /* divisao por 0 */
+    return erro(2); /* impossivel divisao por 0 */
 }
 
 float potenciacao(float x,float y)
