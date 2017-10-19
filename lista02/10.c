@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int fibMem  [1000];
+int fibMem  [1000] = {0};
 
 int fib(int n)
 {
@@ -9,11 +9,10 @@ int fib(int n)
     
     if (fibMem[n] != fib(n-1) + fib(n-2)) {
         fibMem[n] = fib(n-1) + fib(n-2);
+        return fib(n-2) + fib(n-3);
     } else {
-        fibMem[n] = fibMem[n];
-    }
-    
-    return fib(n-1) + fib(n-2);
+        return fib(n-1) + fib(n-2);
+    }  
 }
 
 int main( )
