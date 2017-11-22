@@ -35,11 +35,6 @@ int main (void)
     clock_t tempo_init, tempo_fim;
     double tempo_gasto;
     ulint soma = 0;
-    ulint numero;
-    
-    scanf("%lu", &numero);
-    
-    printf("%lu (normal)\n%lu (bitwise)\n", f1(numero), f2(numero));
     
     /* medicao de tempo gasto na versao normal */
     tempo_init = clock();
