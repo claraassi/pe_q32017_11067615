@@ -42,21 +42,6 @@ int main (void)
     clock_t tempo_init, tempo_fim;
     double tempo_gasto;
     ulint soma = 0;
-    int numero;
-    
-    scanf("%d", &numero);
-    
-    if (f1(numero) == 1) {
-        printf("sim (versao normal)\n");
-    } else {
-        printf("nao (versao normal)\n");
-    }
-    
-    if (f2(numero) == 1) {
-        printf("sim (versao bitwise)\n");
-    } else {
-        printf("nao (versao bitwise)\n");
-    }
     
     /* medicao de tempo gasto na versao normal */
     tempo_init = clock();
