@@ -32,21 +32,6 @@ int main (void)
     clock_t tempo_init, tempo_fim;
     double tempo_gasto;
     ulint soma = 0;
-    ulint x, y;
-    
-    scanf("%lu %lu", &x, &y);
-    
-    if (f1(x,y)) {
-        printf("maior= %lu e menor= %lu (normal)\n", x, y);
-    } else {
-        printf("maior= %lu e menor= %lu (normal)\n", y, x);
-    }
-    
-    if (f2(x,y)) {
-        printf("maior= %lu e menor= %lu (bitwise)\n", x, y);
-    } else {
-        printf("maior= %lu e menor= %lu (bitwise)\n", y, x);
-    }
     
     /* medicao de tempo gasto na versao normal */
     tempo_init = clock();
