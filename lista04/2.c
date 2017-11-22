@@ -9,20 +9,15 @@ typedef struct tempo {
 struct tempo calcular_diferenca (struct tempo med_1, struct tempo med_2)
 {
     tempo diferenca;
+    int tempo_1, tempo_2, tempo_dif;
     
-    diferenca.min = med_1.min - med_2.min;
-    diferenca.seg = med_1.seg - med_2.seg;
-    diferenca.cen = med_1.cen - med_2.cen;
+    tempo_1 = ((med_1.min * 60) + med_1.seg) * 100 + med_1.cen;
+    tempo_2 = ((med_2.min * 60) + med_2.seg) * 100 + med_2.cen;
+    tempo_dif = tempo_2 - tempo_1;
     
-    if (diferenca.cen < 0) {
-        diferenca.cen += 100;
-        diferenca.seg -= 1;
-    }
-    
-    if (diferenca.seg < 0) {
-        diferenca.seg += 60;
-        diferenca.min -= 1;
-    }
+    diferenca.cen = tempo_dif % 100;
+    diferenca.seg = (tempo_dif / 100) % 60;
+    diferenca.min = tempo_dif / 6000;
     
     return diferenca;
 }
